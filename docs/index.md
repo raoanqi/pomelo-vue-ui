@@ -1,1 +1,1 @@
-### Hello Pomelo-UI
+### Hello pomelo-vue-ui
