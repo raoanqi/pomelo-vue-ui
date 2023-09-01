@@ -1,0 +1,22 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create": "tsnd ./src/index.ts create",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "kolorist": "^1.8.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.6"
+  }
+}
