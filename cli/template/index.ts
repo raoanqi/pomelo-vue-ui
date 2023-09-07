@@ -18,7 +18,7 @@ export {${compName}}
 //导出插件
 export default {
   install(app: App) {
-    app.component(${compName}.name, ${compName}
+    app.component(${compName}.name, ${compName})
   }
 }
   `
