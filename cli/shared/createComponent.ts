@@ -1,12 +1,19 @@
-import { ensureDirSync } from 'fs-extra'
+import { ensureDirSync, writeFileSync } from 'fs-extra'
 import { resolve } from 'path'
 import { lightBlue, lightGreen } from 'kolorist'
+import genCoreTemplate from '../template/core'
+import genTypesTemplate from '../template/types'
+import genStyleTemplate from '../template/style'
+import genTestTemplate from '../template/test'
+import genIndexTemplate from '../template'
 
 export interface ComponentMeta {
   name: string
   title: string
   category: string
 }
+
+const WRITE_FILE_OPTIONS = 'utf-8'
 
 const createComponent = (meta: ComponentMeta) => {
   const { name } = meta
@@ -20,8 +27,22 @@ const createComponent = (meta: ComponentMeta) => {
   ensureDirSync(srcDir)
   ensureDirSync(styleDir)
   ensureDirSync(testDir)
-  // 生成对应的文件
-
+  // 对应的文件目录
+  const coreFilePath = resolve(srcDir, `${name}.tsx`)
+  // 调用函数生成对应的.tsx文件
+  writeFileSync(coreFilePath, genCoreTemplate(name), WRITE_FILE_OPTIONS)
+  // 调用函数生成对应的类型声明文件
+  const typesFilePath = resolve(srcDir, `${name}-types.ts`)
+  writeFileSync(typesFilePath, genTypesTemplate(name), WRITE_FILE_OPTIONS)
+  // 调用函数生成对应的样式文件
+  const styleFilePath = resolve(styleDir, `${name}.scss`)
+  writeFileSync(styleFilePath, genStyleTemplate(name), WRITE_FILE_OPTIONS)
+  // 调用函数生成对应的测试文件
+  const testFilePath = resolve(testDir, `${name}.spec.ts`)
+  writeFileSync(testFilePath, genTestTemplate(name), WRITE_FILE_OPTIONS)
+  // 调用函数生成对应的index.ts文件
+  const indexFilePath = resolve(componentDir, 'index.ts')
+  writeFileSync(indexFilePath, genIndexTemplate(name), WRITE_FILE_OPTIONS)
   // 创建成功通知
   console.log(lightGreen(`✔️组件${name}目录创建成功！`))
   // 输出组件目录
