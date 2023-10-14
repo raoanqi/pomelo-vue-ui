@@ -1,28 +1,31 @@
-const sidebar = {
-  '/': [
-    { text: '快速开始', link: '/' },
-    {
-      text: '通用',
-      children: [
-        {
-          text: '按钮',
-          link: '/components/button/'
-        }
-      ]
-    },
-    { text: '导航' },
-    { text: '反馈' },
-    { text: '数据录入' },
-    { text: '数据展示' },
-    { text: '布局' }
-  ]
-}
+import { defineConfig } from 'vitepress'
+import { demoblockPlugin, demoblockVitePlugin } from 'vitepress-theme-demoblock'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import sidebar from './configs/sidebar'
+import nav from './configs/nav'
 
-const config = {
-  title: 'Pomelo UI',
+export default defineConfig({
+  title: 'Pomelo-UI',
   themeConfig: {
-    sidebar
+    sidebar,
+    nav,
+    socialLinks: [
+      {
+        icon: 'github',
+        link: 'https://github.com/raoanqi/pomelo-vue-ui'
+      }
+    ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2023 Angelo'
+    }
+  },
+  markdown: {
+    config: md => {
+      md.use(demoblockPlugin, {})
+    }
+  },
+  vite: {
+    plugins: [demoblockVitePlugin(), vueJsx()]
   }
-}
-
-export default config
+})

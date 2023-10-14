@@ -35,5 +35,10 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "paths": {
+    "vite": [
+      "node_modules/vite"
+    ]
+  }
 }

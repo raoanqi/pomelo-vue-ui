@@ -2,7 +2,7 @@ import { defineComponent, toRefs } from 'vue'
 import { buttonProps, ButtonProps } from './button-types.ts'
 
 export default defineComponent({
-  name: 'PButton',
+  name: 'Button',
   props: buttonProps,
   setup(props: ButtonProps, { slots }) {
     const { type, size, disabled, block } = toRefs(props)
