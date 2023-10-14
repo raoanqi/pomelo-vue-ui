@@ -6,7 +6,18 @@ import nav from './configs/nav'
 
 export default defineConfig({
   title: 'Pomelo-UI',
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/logo.svg'
+      }
+    ]
+  ],
   themeConfig: {
+    logo: '/logo.svg',
     sidebar,
     nav,
     socialLinks: [
@@ -15,6 +26,9 @@ export default defineConfig({
         link: 'https://github.com/raoanqi/pomelo-vue-ui'
       }
     ],
+    search: {
+      provider: 'local'
+    },
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2023 Angelo'

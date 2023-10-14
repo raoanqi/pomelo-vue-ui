@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "create:template": "cd ./cli && npm run create",
