@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PButton from '../../../../src/button/src/button'
+import PButton from '../../../../src/components/button/src/button'
 </script>
 
 <template>

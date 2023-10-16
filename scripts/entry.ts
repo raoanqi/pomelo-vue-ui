@@ -1,6 +1,6 @@
 // 引入组件，批量导出
 import type { App } from 'vue'
-import ButtonPlugin, { Button } from '../src/button'
+import ButtonPlugin, { Button } from '../src/components/button'
 
 // 导出组件
 export { Button }

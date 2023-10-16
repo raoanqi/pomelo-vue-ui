@@ -1,5 +1,5 @@
-@use './button-config.scss';
-@import './button-base.scss';
+@use 'button-config';
+@import 'button-base';
 
 .s-btn {
   @include button-base;
