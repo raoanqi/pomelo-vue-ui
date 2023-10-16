@@ -6,10 +6,10 @@
   "scripts": {
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "create:template": "cd ./cli && npm run create",
+    "create:template": "cd ./cli && pnpm run create",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
     "prepare": "husky install",
-    "docs:dev": "npm run register:components && vitepress dev docs",
+    "docs:dev": "pnpm run register:components && vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "test": "vitest",
