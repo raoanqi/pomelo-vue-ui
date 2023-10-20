@@ -13,7 +13,7 @@ const genCoreTemplate = (name: string) => {
   // props名称
   const propsName = `${name}Props`
   // 文件名称
-  const propsFileName = `${name}-types.ts`
+  const propsFileName = `${name}-types`
   // 类名称
   const className = `p-${name}`
   return `\

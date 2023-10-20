@@ -18,7 +18,7 @@ const WRITE_FILE_OPTIONS = 'utf-8'
 const createComponent = (meta: ComponentMeta) => {
   const { name } = meta
   // 拼接项目目录
-  const componentDir = resolve('../src', name)
+  const componentDir = resolve('../src/components', name)
   // 每个组件下面都有src，style，test三个文件夹，生成对应的文件夹
   const srcDir = resolve(componentDir, 'src')
   const styleDir = resolve(componentDir, 'style')

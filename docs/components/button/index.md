@@ -1,4 +1,6 @@
-## Button -- 按钮
+# Button 按钮
+
+## 基本使用
 
 :::demo
 

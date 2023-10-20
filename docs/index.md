@@ -1,11 +1,11 @@
 ---
 layout: home
 
-title: Pomelo UI
+title: Pomelo-UI
 titleTemplate: 一套基于Vite+Vue3+TypeScript的组件库
 
 hero:
-  name: Pomelo UI
+  name: Pomelo-UI
   text: 一套基于Vite+Vue3+TypeScript的组件库
   actions:
     - theme: brand

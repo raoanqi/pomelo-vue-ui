@@ -1,6 +1,6 @@
 import { App } from 'vue'
-import { installComponent } from '../../install.ts'
-import { PomeloUIOptions } from '../../utils/global-config.ts'
+import { installComponent } from '../../install'
+import { PomeloUIOptions } from '../../utils/global-config'
 import Button from './src/button.tsx'
 
 // 具名导出
