@@ -7,9 +7,6 @@
 ```vue
 
 <template>
-  <p-alert>测试</p-alert>
-  <p-alert>测试</p-alert>
-  <p-alert>测试</p-alert>
-  <p-alert>测试</p-alert>
+  <p-alert title="标题" description="这是一段描述"></p-alert>
 </template>
 ```

@@ -2,7 +2,8 @@
 
 ## 环境支持
 
-Pomelo-UI基于[Vue 3](https://vuejs.org/)进行开发，由于Vue 3官方宣布不再支持IE 11, Pomelo-UI也不再支持IE浏览器。
+* Pomelo-UI基于[Vue 3](https://vuejs.org/)进行开发，由于Vue 3官方宣布不再支持IE 11, Pomelo-UI也不再支持IE浏览器
+* Vue.js版本>=3.3.+
 
 ## 版本
 
@@ -29,7 +30,7 @@ pnpm install pomelo-vue-ui
 
 ```typescript
 // main.ts
-import {createApp} from 'vue'
+import { createApp } from 'vue'
 import PomeloUI from 'pomelo-vue-ui'
 import App from './App.vue'
 

@@ -1,6 +1,5 @@
 import { ExtractPropTypes, PropType } from 'vue'
 import type { AlertType, AlertClosable, AlertCenter } from './alertPropType'
-import { MouseEvent } from 'happy-dom'
 
 export const alertProps = {
   /**
