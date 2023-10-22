@@ -18,6 +18,12 @@ module.exports = {
       parserOptions: {
         sourceType: 'script'
       }
+    },
+    {
+      files: ['*.vue'],
+      rules: {
+        'vue/multi-word-component-names': 0
+      }
     }
   ],
   parserOptions: {

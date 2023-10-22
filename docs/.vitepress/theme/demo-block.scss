@@ -5,33 +5,27 @@ $base-bg-dark: #2c2c2c;
 $brand: #42b883;
 $area: #f8f8f8;
 $area-dark: #242424;
-$text:#252b3a;
-$text-dark:#f8f8f8;
+$text: #252b3a;
+$text-dark: #f8f8f8;
 $font-size: 12px;
 $disabled-line: #dfe1e6;
 $border-radius: 3px;
-$disabled-bg:#f5f5f6;
-$disabled-text:#adb0b8;
-
-// 点击复制代码 message样式修复
-.demoblock-message-wrap{
-  .demoblock-message-content{
-    background-color: #3dcca6 !important;
-  }
-}
+$disabled-bg: #f5f5f6;
+$disabled-text: #adb0b8;
 
 .dark {
   .demo-block {
     border: solid 1px $dividing-line-dark !important;
   }
+
   .demo-block-control {
     background-color: $base-bg-dark !important;
     border-top: solid 1px $dividing-line-dark !important;
-  
+
     &:hover {
       color: $brand !important;
     }
-  
+
     .control-button {
       color: $brand !important;
     }
@@ -40,12 +34,13 @@ $disabled-text:#adb0b8;
       color: #565656
     }
   }
+
   .meta {
     border-top: solid 1px $dividing-line-dark !important;
     background-color: $area-dark !important;
-  
+
     .description {
-      border:transparent !important;
+      border: transparent !important;
       color: $text-dark !important;
       background-color: transparent !important;
     }
@@ -61,8 +56,8 @@ $disabled-text:#adb0b8;
   .vp-doc [class*='language-'] {
     pre {
       background-color: $base-bg-dark !important;
-      
-      code{
+
+      code {
         background-color: $base-bg-dark !important;
         border-radius: 10px;
         color: $text-dark !important
@@ -138,7 +133,6 @@ $disabled-text:#adb0b8;
 }
 
 
-
 // 代码样式
 code {
   margin: 0;
@@ -146,7 +140,7 @@ code {
   padding: 0.25rem 0.5rem;
   font-family: var(--code-font-family);
   font-size: 0.85em;
-  color: var(--text,#252b3a) !important;
+  color: var(--text, #252b3a) !important;
   background-color: $area !important;
 }
 
@@ -352,10 +346,6 @@ div[class~='language-yaml']:before {
 
 div[class~='language-dockerfile']:before {
   content: 'dockerfile';
-}
-
-div[class~='language-vue']:before {
-  content: 'vue';
 }
 
 /**

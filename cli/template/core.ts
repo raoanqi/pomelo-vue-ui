@@ -7,7 +7,7 @@ import { upperFirst } from './utils'
 
 const genCoreTemplate = (name: string) => {
   // 组件名称
-  const compName = `P${upperFirst(name)}`
+  const compName = `${upperFirst(name)}`
   // 类型名称
   const propsTypeName = `${upperFirst(name)}Props`
   // props名称

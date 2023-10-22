@@ -10,6 +10,8 @@ const genIndexTemplate = (name: string) => {
   const compName = upperFirst(name)
   return `\
 import {App} from 'vue'
+import { installComponent } from '../../install'
+import { PomeloUIOptions } from '../../utils/global-config'
 import ${compName} from './src/${name}'
 
 //具名导出
@@ -17,8 +19,8 @@ export {${compName}}
 
 //导出插件
 export default {
-  install(app: App) {
-    app.component(${compName}.name, ${compName})
+  install(app: App, options?: PomeloUIOptions) {
+    installComponent(app, ${compName}, options)
   }
 }
   `

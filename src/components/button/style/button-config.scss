@@ -3,68 +3,68 @@
 // 按钮类型的配置
 $type: (
         primary: (
-                color: $s-light-text,
-                background-color: $s-primary
+                color: $p-light-text,
+                background-color: $p-primary
         ),
         secondary: (
-                color: $s-text,
-                background-color: $s-block,
-                border-color: $s-line
+                color: $p-text,
+                background-color: $p-block,
+                border-color: $p-line
         ),
         text: (
                 padding: 0,
-                color: $s-brand-active
+                color: $p-brand-active
         )
 );
 // 伪类的配置
 $pseudo: (
         primary: (
                 hover: (
-                        background-color: $s-primary-hover
+                        background-color: $p-primary-hover
                 ),
                 focus: (
-                        background-color: $s-primary-hover
+                        background-color: $p-primary-hover
                 ),
                 active: (
-                        background-color: $s-primary-active
+                        background-color: $p-primary-active
                 ),
                 disabled: (
-                        color: $s-light-text,
-                        background-color: $s-primary-disabled,
+                        color: $p-light-text,
+                        background-color: $p-primary-disabled,
                         border: none
                 )
         ),
         secondary: (
                 hover: (
-                        border-color: $s-form-control-line-active,
-                        color: $s-brand-active
+                        border-color: $p-form-control-line-active,
+                        color: $p-brand-active
                 ),
                 focus: (
-                        border-color: $s-form-control-line-active,
-                        color: $s-brand-active
+                        border-color: $p-form-control-line-active,
+                        color: $p-brand-active
                 ),
                 active: (
-                        border-color: $s-form-control-line-active,
-                        color: $s-brand-active
+                        border-color: $p-form-control-line-active,
+                        color: $p-brand-active
                 ),
                 disabled: (
-                        color: $s-disabled-text,
-                        background-color: $s-disabled-bg,
-                        border: 1px solid $s-disabled-line
+                        color: $p-disabled-text,
+                        background-color: $p-disabled-bg,
+                        border: 1px solid $p-disabled-line
                 )
         ),
         text: (
                 hover: (
-                        color: $s-brand-active-focus
+                        color: $p-brand-active-focus
                 ),
                 focus: (
-                        color: $s-brand-active-focus
+                        color: $p-brand-active-focus
                 ),
                 active: (
-                        color: $s-brand-active-focus
+                        color: $p-brand-active-focus
                 ),
                 disabled: (
-                        color: $s-disabled-text
+                        color: $p-disabled-text
                 )
         )
 );
@@ -73,14 +73,14 @@ $size: (
         small: (
                 height: 24px,
                 padding: 0 16px,
-                font-size: $s-font-size-sm
+                font-size: $p-font-size-sm
         ),
         medium: (
-                font-size: $s-font-size-md
+                font-size: $p-font-size-md
         ),
         large: (
                 height: 32px,
                 padding: 0 24px,
-                font-size: $s-font-size-lg
+                font-size: $p-font-size-lg
         )
 );

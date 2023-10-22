@@ -38,7 +38,7 @@ const createComponent = (meta: ComponentMeta) => {
   const styleFilePath = resolve(styleDir, `${name}.scss`)
   writeFileSync(styleFilePath, genStyleTemplate(name), WRITE_FILE_OPTIONS)
   // 调用函数生成对应的测试文件
-  const testFilePath = resolve(testDir, `${name}.spec.ts`)
+  const testFilePath = resolve(testDir, `${name}.test.ts`)
   writeFileSync(testFilePath, genTestTemplate(name), WRITE_FILE_OPTIONS)
   // 调用函数生成对应的index.ts文件
   const indexFilePath = resolve(componentDir, 'index.ts')

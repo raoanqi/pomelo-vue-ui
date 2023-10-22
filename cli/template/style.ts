@@ -4,7 +4,7 @@
 
 const genStyleTemplate = (name: string) => {
   return `\
-  .s-${name} {
+  .p-${name} {
   /* 在这里编写组件样式 */
   }
   `

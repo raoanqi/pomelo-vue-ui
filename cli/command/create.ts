@@ -5,7 +5,7 @@ import createComponent from '../shared/createComponent'
 // 创建类型
 const CREATE_TYPES = ['component', 'lib-entry']
 // 创建的组件分类
-const CREATE_CATEGORIES = ['通用', '导航', '反馈', '数据录入', '数据展示']
+const CREATE_CATEGORIES = ['基础组件', '反馈组件', '表单组件', '数据展示组件']
 
 export const onCreate = async (args = { type: '' }) => {
   // 判断用户是否输入type

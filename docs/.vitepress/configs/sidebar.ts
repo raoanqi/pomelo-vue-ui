@@ -21,6 +21,15 @@ export default [
     ]
   },
   {
+    text: 'Feedback 反馈组件',
+    items: [
+      {
+        text: 'Alert 提示',
+        link: '/components/alert/index.md'
+      }
+    ]
+  },
+  {
     text: 'Form 表单组件',
     items: [
       {
@@ -30,7 +39,7 @@ export default [
     ]
   },
   {
-    text: 'Data 数据展示',
+    text: 'Data 数据展示组件',
     items: [
       {
         text: 'Table 表格',

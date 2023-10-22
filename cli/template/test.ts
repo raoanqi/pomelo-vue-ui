@@ -8,6 +8,7 @@ import { upperFirst } from './utils'
 const genTestTemplate = (name: string) => {
   return `\
 import { render } from '@testing-library/vue'
+import { describe, test } from 'vitest'
 import ${upperFirst(name)} from '../src/${name}.tsx'
 describe('${name}组件测试', () => {
   test('${name}基础测试', async () => {
