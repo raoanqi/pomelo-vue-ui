@@ -1,7 +1,7 @@
 import Theme from 'vitepress/theme'
 import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
-import './demo-block.scss'
-import '../../../src/index.scss'
+import './demo-block.less'
+import '../../../src/index.less'
 import { useComponents } from './useComponents'
 import PomeloUI from '../../../src/index'
 

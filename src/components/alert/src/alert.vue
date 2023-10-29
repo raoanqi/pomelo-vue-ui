@@ -18,12 +18,12 @@
 import { ref } from 'vue'
 import { alertProps, alertEmits } from './alert'
 
+defineOptions({
+  name: 'PoAlert'
+})
+
 const props = defineProps(alertProps)
 const emit = defineEmits(alertEmits)
-
-defineOptions({
-  name: 'Alert'
-})
 
 const visible = ref(true)
 

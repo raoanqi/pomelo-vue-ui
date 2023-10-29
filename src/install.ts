@@ -1,5 +1,5 @@
-import { setGlobalConfig, getComponentPrefix } from './utils/global-config'
-import type { PomeloUIOptions } from './utils/global-config'
+import { setGlobalConfig, getComponentPrefix } from './utils/globalConfig'
+import type { PomeloOptions } from './utils/type'
 import type { App } from 'vue'
 
 type ComponentType = any
@@ -7,7 +7,7 @@ type ComponentType = any
 export const installComponent = (
   app: App,
   component: ComponentType,
-  options?: PomeloUIOptions
+  options?: PomeloOptions
 ) => {
   /**
    * export interface PomeloUIOptions {
@@ -22,6 +22,6 @@ export const installComponent = (
   // 如果还没有注册，就调用下面的逻辑进行注册
   if (!registered) {
     setGlobalConfig(app, options)
-    app.component(`${componentPrefix}${component.name}`, component)
+    app.component(`${componentPrefix}${component.name.slice(2)}`, component)
   }
 }

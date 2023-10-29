@@ -7,35 +7,35 @@ export const alertProps = {
    **/
   title: {
     type: String,
-    default: 'Title'
+    default: () => 'Title'
   },
   /**
    * description
    **/
   description: {
     type: String,
-    default: 'This is description'
+    default: () => 'This is description'
   },
   /**
    * type
    **/
   type: {
     type: String as PropType<AlertType>,
-    default: ''
+    default: () => 'info'
   },
   /**
    * closable
    **/
   closable: {
     type: Boolean as PropType<AlertClosable>,
-    default: true
+    default: () => true
   },
   /**
    * place content in center
    **/
   center: {
     type: Boolean as PropType<AlertCenter>,
-    default: false
+    default: () => false
   }
 } as const
 export type AlertProps = ExtractPropTypes<typeof alertProps>

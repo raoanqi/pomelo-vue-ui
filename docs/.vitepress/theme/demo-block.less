@@ -1,33 +1,33 @@
-$dividing-line: #dfe1e6;
-$dividing-line-dark: #3b3b3b;
-$base-bg: #ffffff;
-$base-bg-dark: #2c2c2c;
-$brand: #42b883;
-$area: #f8f8f8;
-$area-dark: #242424;
-$text: #252b3a;
-$text-dark: #f8f8f8;
-$font-size: 12px;
-$disabled-line: #dfe1e6;
-$border-radius: 3px;
-$disabled-bg: #f5f5f6;
-$disabled-text: #adb0b8;
+@dividing-line: #dfe1e6;
+@dividing-line-dark: #3b3b3b;
+@base-bg: #ffffff;
+@base-bg-dark: #2c2c2c;
+@brand: #42b883;
+@area: #f8f8f8;
+@area-dark: #242424;
+@text: #252b3a;
+@text-dark: #f8f8f8;
+@font-size: 12px;
+@disabled-line: #dfe1e6;
+@border-radius: 3px;
+@disabled-bg: #f5f5f6;
+@disabled-text: #adb0b8;
 
 .dark {
   .demo-block {
-    border: solid 1px $dividing-line-dark !important;
+    border: solid 1px @dividing-line-dark !important;
   }
 
   .demo-block-control {
-    background-color: $base-bg-dark !important;
-    border-top: solid 1px $dividing-line-dark !important;
+    background-color: @base-bg-dark !important;
+    border-top: solid 1px @dividing-line-dark !important;
 
     &:hover {
-      color: $brand !important;
+      color: @brand !important;
     }
 
     .control-button {
-      color: $brand !important;
+      color: @brand !important;
     }
 
     .control-icon {
@@ -36,38 +36,38 @@ $disabled-text: #adb0b8;
   }
 
   .meta {
-    border-top: solid 1px $dividing-line-dark !important;
-    background-color: $area-dark !important;
+    border-top: solid 1px @dividing-line-dark !important;
+    background-color: @area-dark !important;
 
     .description {
       border: transparent !important;
-      color: $text-dark !important;
+      color: @text-dark !important;
       background-color: transparent !important;
     }
 
     .highlight div[class*='language-'] {
       margin: 0 !important;
       border-radius: 0;
-      border: solid 1px $dividing-line-dark !important;
-      background-color: $base-bg-dark !important;
+      border: solid 1px @dividing-line-dark !important;
+      background-color: @base-bg-dark !important;
     }
   }
 
   .vp-doc [class*='language-'] {
     pre {
-      background-color: $base-bg-dark !important;
+      background-color: @base-bg-dark !important;
 
       code {
-        background-color: $base-bg-dark !important;
+        background-color: @base-bg-dark !important;
         border-radius: 10px;
-        color: $text-dark !important
+        color: @text-dark !important
       }
     }
   }
 }
 
 .demo-block {
-  border: solid 1px $dividing-line !important;
+  border: solid 1px @dividing-line !important;
 
   &.hover {
     box-shadow: none !important;
@@ -93,26 +93,26 @@ $disabled-text: #adb0b8;
 }
 
 .demo-block-control {
-  background-color: $base-bg !important;
-  border-top: solid 1px $dividing-line !important;
+  background-color: @base-bg !important;
+  border-top: solid 1px @dividing-line !important;
 
   &:hover {
-    color: $brand !important;
+    color: @brand !important;
   }
 
   .control-button {
-    color: $brand !important;
+    color: @brand !important;
   }
 }
 
 .meta {
-  border-top: solid 1px $dividing-line !important;
-  background-color: $area !important;
+  border-top: solid 1px @dividing-line !important;
+  background-color: @area !important;
 
   .description {
-    border: solid 1px $dividing-line !important;
-    color: $text !important;
-    background-color: $base-bg !important;
+    border: solid 1px @dividing-line !important;
+    color: @text !important;
+    background-color: @base-bg !important;
   }
 }
 
@@ -141,7 +141,7 @@ code {
   font-family: var(--code-font-family);
   font-size: 0.85em;
   color: var(--text, #252b3a) !important;
-  background-color: $area !important;
+  background-color: @area !important;
 }
 
 code .token.deleted {
@@ -155,7 +155,7 @@ code .token.inserted {
 div[class*='language-'] {
   position: relative;
   margin: 1rem -1.5rem;
-  background-color: $area !important;
+  background-color: @area !important;
   overflow-x: auto;
 }
 
@@ -259,93 +259,6 @@ div[class*='language-']:before {
   z-index: 2;
   font-size: 0.8rem;
   color: #888;
-}
-
-div[class~='language-html']:before,
-div[class~='language-markup']:before {
-  content: 'html';
-}
-
-div[class~='language-md']:before,
-div[class~='language-markdown']:before {
-  content: 'md';
-}
-
-div[class~='language-css']:before {
-  content: 'css';
-}
-
-div[class~='language-sass']:before {
-  content: 'sass';
-}
-
-div[class~='language-scss']:before {
-  content: 'scss';
-}
-
-div[class~='language-less']:before {
-  content: 'less';
-}
-
-div[class~='language-stylus']:before {
-  content: 'styl';
-}
-
-div[class~='language-js']:before,
-div[class~='language-javascript']:before {
-  content: 'js';
-}
-
-div[class~='language-ts']:before,
-div[class~='language-typescript']:before {
-  content: 'ts';
-}
-
-div[class~='language-json']:before {
-  content: 'json';
-}
-
-div[class~='language-rb']:before,
-div[class~='language-ruby']:before {
-  content: 'rb';
-}
-
-div[class~='language-py']:before,
-div[class~='language-python']:before {
-  content: 'py';
-}
-
-div[class~='language-sh']:before,
-div[class~='language-bash']:before {
-  content: 'sh';
-}
-
-div[class~='language-php']:before {
-  content: 'php';
-}
-
-div[class~='language-go']:before {
-  content: 'go';
-}
-
-div[class~='language-rust']:before {
-  content: 'rust';
-}
-
-div[class~='language-java']:before {
-  content: 'java';
-}
-
-div[class~='language-c']:before {
-  content: 'c';
-}
-
-div[class~='language-yaml']:before {
-  content: 'yaml';
-}
-
-div[class~='language-dockerfile']:before {
-  content: 'dockerfile';
 }
 
 /**

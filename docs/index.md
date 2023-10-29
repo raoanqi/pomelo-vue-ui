@@ -2,22 +2,22 @@
 layout: home
 
 title: Pomelo-UI
-titleTemplate: 一套基于Vite+Vue3+TypeScript的组件库
+titleTemplate: 一套基于Vue3+TypeScript的组件库
 
 hero:
   name: Pomelo-UI
-  text: 一套基于Vite+Vue3+TypeScript的组件库
+  text: 一套基于Vue3+TypeScript的组件库
   actions:
     - theme: brand
-      text: 快速上手
+      text: 立即体验
       link: /quickStart.md
 
 features:
   - icon: ⚡️
-    title: "特性1"
-    details:
+    title: "开箱即用"
+    details: 开箱即用，
   - icon: 💡
-    title: "特性2"
+    title: ""
     details:
   - icon: 🛠️
     title: "特性3"

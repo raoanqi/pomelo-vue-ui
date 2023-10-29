@@ -30,11 +30,11 @@ pnpm install pomelo-vue-ui
 
 ```typescript
 // main.ts
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import PomeloUI from 'pomelo-vue-ui'
 import App from './App.vue'
 
 const app = createApp(App)
-app.use(ArcoVue)
+app.use(PomeloUI)
 app.mount('#app')
 ```

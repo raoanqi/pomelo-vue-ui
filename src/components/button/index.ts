@@ -1,14 +1,14 @@
 import { App } from 'vue'
 import { installComponent } from '../../install'
-import { PomeloUIOptions } from '../../utils/global-config'
-import Button from './src/button.tsx'
+import { PomeloOptions } from '../../utils/type'
+import Button from './src/button.vue'
 
 // 具名导出
 export { Button }
 
 // 导出插件
 export default {
-  install(app: App, options?: PomeloUIOptions) {
+  install(app: App, options?: PomeloOptions) {
     installComponent(app, Button, options)
   }
 }
