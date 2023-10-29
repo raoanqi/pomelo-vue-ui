@@ -6,7 +6,7 @@
 @p-vars-prefix: ~''; // css 变量的前缀
 
 // --p-color-white or --color-white
-@p-cssvars-prefix: if(@p-vars-prefix = ~'', '-', ~'--@{p-vars-prefix}');
+@p-cssvars-prefix: if(@p-vars-prefix = ~'', ~'-', ~'--@{p-vars-prefix}');
 
 /******** borderSize *******/
 
@@ -203,6 +203,7 @@
 @color-primary-3: rgb(var(~'@{p-cssvars-prefix}-primary-3'));
 @color-primary-4: rgb(var(~'@{p-cssvars-prefix}-primary-4'));
 @color-primary-5: rgb(var(~'@{p-cssvars-prefix}-primary-5'));
+// 这里面最终会算出一个rgb值
 @color-primary-6: rgb(var(~'@{p-cssvars-prefix}-primary-6'));
 @color-primary-7: rgb(var(~'@{p-cssvars-prefix}-primary-7'));
 @color-primary-8: rgb(var(~'@{p-cssvars-prefix}-primary-8'));

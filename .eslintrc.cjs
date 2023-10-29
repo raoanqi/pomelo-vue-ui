@@ -22,7 +22,7 @@ module.exports = {
     {
       files: ['*.vue'],
       rules: {
-        'vue/multi-word-component-names': 0
+        'vue/multi-word-component-names': 1
       }
     }
   ],

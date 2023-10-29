@@ -12,6 +12,15 @@ export default [
     ]
   },
   {
+    text: ' Layout 布局组件',
+    items: [
+      {
+        text: 'Space 间隔',
+        link: '/components/space/index.md'
+      }
+    ]
+  },
+  {
     text: 'Basic 基础组件',
     items: [
       {
