@@ -1,12 +1,12 @@
 import { App } from 'vue'
 import { installComponent } from '../../install'
 import { PomeloOptions } from '../../utils/type'
-import Button from './src/button.vue'
+import Tag from './src/tag.vue'
 
-export { Button }
+export { Tag }
 
 export default {
   install(app: App, options?: PomeloOptions) {
-    installComponent(app, Button, options)
+    installComponent(app, Tag, options)
   }
 }

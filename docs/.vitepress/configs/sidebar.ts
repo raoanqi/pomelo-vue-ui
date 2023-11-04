@@ -51,6 +51,10 @@ export default [
     text: 'Data 数据展示组件',
     items: [
       {
+        text: 'Tag 标签',
+        link: '/components/tag/index.md'
+      },
+      {
         text: 'Table 表格',
         link: '/components/table/index.md'
       },

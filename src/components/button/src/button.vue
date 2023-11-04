@@ -20,7 +20,6 @@ defineOptions({
 
 const props = defineProps(buttonProps)
 const emit = defineEmits(buttonEmits)
-
 const componentBaseClass = getComponentBaseClass('btn')
 const classList = computed(() => [
   componentBaseClass,
