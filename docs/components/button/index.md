@@ -96,3 +96,28 @@
 
 :::
 
+## Button API
+
+### Props
+
+| 参数名       | 描述                                                                                                                            | 类型                                                |      默认值      |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|:-------------:|
+| type      | 按钮的类型                                                                                                                         | `'primary' \| 'secondary' \| 'outline' \| 'text'` | `'secondary'` |
+| shape     | 按钮的形状                                                                                                                         | `'square' \| 'round' \| 'circle'`                 |   `square`    |
+| status    | 按钮的状态                                                                                                                         | `'normal' \| 'warning' \| 'success' \| 'danger'`  |  `'normal'`   |
+| size      | 按钮的尺寸                                                                                                                         | `'mini' \| 'small' \| 'medium' \| 'large'`        |  `'medium'`   |
+| disabled  | 按钮是否禁用                                                                                                                        | `boolean`                                         |    `false`    |
+| html-type | 设置 `button` 的原生 `type` 属性，可选值参考 [HTML标准](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type "_blank") | `string`                                          |  `'button'`   |
+
+### Events
+
+| 事件名   | 描述         | 参数               |
+|-------|------------|------------------|
+| click | 点击按钮时触发的事件 | ev: `MouseEvent` |
+
+### Slots
+
+| 插槽名     | 描述             |
+|---------|----------------|
+| default | 默认插槽，用于自定义默认内容 |
+
