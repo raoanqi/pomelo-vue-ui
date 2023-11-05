@@ -27,6 +27,6 @@ export const dividerProps = {
     type: String as PropType<DividerContentPosition>,
     default: () => 'center'
   }
-}
+} as const
 
 export type DividerProps = ExtractPropTypes<typeof dividerProps>

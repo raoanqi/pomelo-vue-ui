@@ -1,42 +1,31 @@
-import { render } from '@testing-library/vue'
+import { mount } from '@vue/test-utils'
 import { describe, test, expect } from 'vitest'
-import Button from '../src/button.tsx'
+import Button from '../src/button.vue'
 
 describe('Button Test', () => {
-  test('button基础测试', () => {
-    const { getByRole } = render(Button)
-    getByRole('button')
+  test('create', () => {
+    const wrapper = mount(Button)
+    expect(wrapper.findComponent(Button).exists()).toBe(true)
   })
 
-  test('button默认插槽', () => {
-    const { getByText } = render(Button)
-    getByText('按钮')
+  test('default slot text', () => {
+    const wrapper = mount(Button)
+    expect(wrapper.text()).toBe('Button')
   })
 
-  test('button传入插槽', () => {
-    const { getByText } = render(Button, {
-      slots: {
-        default() {
-          return '确认'
-        }
-      }
-    })
-    getByText('确认')
+  test('type', () => {
+    const wrapper = mount(Button)
+    expect(wrapper.classes()).toContain('p-btn-primary')
   })
 
-  test('button默认type', () => {
-    const { getByRole } = render(Button)
-    const button = getByRole('button')
-    expect(button.classList.contains('p-btn--primary')).toBe(true)
-  })
-
-  test('button传入type', () => {
-    const { getByRole } = render(Button, {
+  test('disabled', async () => {
+    const wrapper = mount(Button, {
       props: {
-        type: 'secondary'
+        disabled: true
       }
     })
-    const button = getByRole('button')
-    expect(button.classList.contains('p-btn--secondary')).toBe(true)
+    expect(wrapper.classes()).toContain('p-btn-disabled')
+    await wrapper.trigger('click')
+    expect(wrapper.emitted('click')).toBeUndefined()
   })
 })

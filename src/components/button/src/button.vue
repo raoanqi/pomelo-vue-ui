@@ -5,7 +5,7 @@
     :class="classList"
     @click="handleClick"
   >
-    <slot></slot>
+    <slot>Button</slot>
   </button>
 </template>
 
