@@ -17,6 +17,10 @@ export default [
       {
         text: 'Space 间隔',
         link: '/components/space/index.md'
+      },
+      {
+        text: 'Divider 分割线',
+        link: '/components/divider/index.md'
       }
     ]
   },
