@@ -1,5 +1,7 @@
 # Alert 提示
 
+提示可以在页面上强调展示数据。
+
 ## 基本使用
 
 :::demo
@@ -7,6 +9,6 @@
 ```vue
 
 <template>
-  <p-alert title="标题" description="这是一段描述"></p-alert>
+  <p-alert>This is a paragraph.</p-alert>
 </template>
 ```

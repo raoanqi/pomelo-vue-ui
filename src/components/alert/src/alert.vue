@@ -1,34 +1,39 @@
 <template>
-  <transition>
-    <div v-if="visible">
-      <span v-if="title || $slots.title">
+  <div v-if="visible" :class="classList">
+    <div :class="`${componentBaseClass}-body`">
+      <div v-if="title || $slots.title" :class="`${componentBaseClass}-title`">
         <slot name="title">{{ title }}</slot>
-      </span>
-      <p v-if="description || $slots.default">
+      </div>
+      <div
+        v-if="description || $slots.default"
+        :class="`${componentBaseClass}-content`"
+      >
         <slot>{{ description }}</slot>
-      </p>
-      <template v-if="closable">
-        <div @click="close">Close</div>
-      </template>
+      </div>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { alertProps, alertEmits } from './alert'
+import { ref, useSlots } from 'vue'
+import { computed } from 'vue'
+import { getComponentBaseClass } from '../../../utils/globalConfig'
+import { alertProps } from './alert'
 
 defineOptions({
   name: 'PoAlert'
 })
 
 const props = defineProps(alertProps)
-const emit = defineEmits(alertEmits)
-
+const slots = useSlots()
+const componentBaseClass = getComponentBaseClass('alert')
 const visible = ref(true)
-
-const close = (event: MouseEvent) => {
-  visible.value = false
-  emit('close', event)
-}
+const classList = computed(() => [
+  componentBaseClass,
+  `${componentBaseClass}-${props.type}`,
+  {
+    [`${componentBaseClass}-with-title`]: Boolean(slots.title || props.title),
+    [`${componentBaseClass}-center`]: props.center
+  }
+])
 </script>

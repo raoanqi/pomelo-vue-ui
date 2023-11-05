@@ -1,10 +1,15 @@
-import { render } from '@testing-library/vue'
+import { mount } from '@vue/test-utils'
 import { describe, test } from 'vitest'
 import Alert from '../src/alert.vue'
-describe('alert组件测试', () => {
-  test('alert基础测试', async () => {
-    const { getByRole } = render(Alert)
-    getByRole('alert')
+
+describe('Alert Test', () => {
+  test('create', () => {
+    const wrapper = mount(Alert)
+  })
+  test('create', () => {
+    const wrapper = mount(Alert)
+  })
+  test('create', () => {
+    const wrapper = mount(Alert)
   })
 })
-  

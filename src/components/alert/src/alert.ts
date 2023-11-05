@@ -1,5 +1,5 @@
 import { ExtractPropTypes, PropType } from 'vue'
-import type { AlertType, AlertClosable, AlertCenter } from './alertPropType'
+import type { AlertType, AlertCenter } from './alertPropType'
 
 export const alertProps = {
   /**
@@ -7,14 +7,14 @@ export const alertProps = {
    **/
   title: {
     type: String,
-    default: () => 'Title'
+    default: () => ''
   },
   /**
    * description
    **/
   description: {
     type: String,
-    default: () => 'This is description'
+    default: () => ''
   },
   /**
    * type
@@ -22,13 +22,6 @@ export const alertProps = {
   type: {
     type: String as PropType<AlertType>,
     default: () => 'info'
-  },
-  /**
-   * closable
-   **/
-  closable: {
-    type: Boolean as PropType<AlertClosable>,
-    default: () => true
   },
   /**
    * place content in center

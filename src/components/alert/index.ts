@@ -1,14 +1,12 @@
 import { App } from 'vue'
 import { installComponent } from '../../install'
-import { PomeloUIOptions } from '../../utils/globalConfig.ts'
+import { PomeloOptions } from '../../utils/type'
 import Alert from './src/alert.vue'
 
-//具名导出
 export { Alert }
 
-//导出插件
 export default {
-  install(app: App, options?: PomeloUIOptions) {
+  install(app: App, options?: PomeloOptions) {
     installComponent(app, Alert, options)
   }
 }
