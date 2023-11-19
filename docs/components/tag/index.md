@@ -52,7 +52,7 @@
   <p-tag bgColor="green">Green</p-tag>
   <p-tag bgColor="gray">Gray</p-tag>
   <!--自定义颜色-->
-  <p-tag bgColor="#427ef5">Customize Color</p-tag>
+  <p-tag bg-color="#427ef5">Customize Color</p-tag>
 </template>
 ```
 
@@ -62,10 +62,10 @@
 
 ### Props
 
-| 参数名     | 描述     | 类型                                         |    默认值     |
-|---------|--------|--------------------------------------------|:----------:|
-| size    | 按钮的尺寸  | `'large' \| 'medium' \| 'small'`           | `'medium'` |
-| bgColor | 标签的背景色 | `'mini' \| 'small' \| 'medium' \| 'large'` |   `N/A`    |
+| 参数名      | 描述     | 类型                                         |    默认值     |
+|----------|--------|--------------------------------------------|:----------:|
+| size     | 按钮的尺寸  | `'large' \| 'medium' \| 'small'`           | `'medium'` |
+| bg-color | 标签的背景色 | `'mini' \| 'small' \| 'medium' \| 'large'` |   `N/A`    |
 
 ### Slots
 

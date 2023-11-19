@@ -39,6 +39,10 @@ export default [
       {
         text: 'Alert 提示',
         link: '/components/alert/index.md'
+      },
+      {
+        text: 'Message 消息提示',
+        link: '/components/message/index.md'
       }
     ]
   },
